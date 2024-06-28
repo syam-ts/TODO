@@ -13,4 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     else {
         console.error("Element with ID 'currentDate' not found");
     }
+    var addButton = document.getElementById('addBtn');
+    var taskInput = document.getElementById('taskInput');
+    if (addButton) {
+        addButton.addEventListener('click', function (e) {
+            if (taskInput) {
+                alert(taskInput.value);
+            }
+            else {
+                console.error("Element with ID 'taskInput' not found");
+            }
+        });
+    }
+    else {
+        console.error("Element with ID 'addBtn' not found");
+    }
 });
