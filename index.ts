@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (addButton) {
         addButton.addEventListener('click', (e: Event) => {
             if (taskInput) {
-            tasks.innerText = taskInput.value;
+                const newTask = document.createElement('div');
+                newTask.innerText = taskInput.value;
+    
+                tasks.appendChild(newTask);
+    
+                taskInput.value = '';
             } else {
                 console.error("Element with ID 'taskInput' not found");
             }
@@ -27,5 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Element with ID 'addBtn' not found");
     }
+    
     
 });
