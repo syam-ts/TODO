@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const addButton = document.getElementById('addBtn') as HTMLElement;
     const taskInput = document.getElementById('taskInput') as HTMLInputElement;
+    const tasks = document.getElementById('tasks') as HTMLElement;
     
     if (addButton) {
         addButton.addEventListener('click', (e: Event) => {
             if (taskInput) {
-                
-                alert(taskInput.value);
+            tasks.innerText = taskInput.value;
             } else {
                 console.error("Element with ID 'taskInput' not found");
             }

@@ -15,10 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     var addButton = document.getElementById('addBtn');
     var taskInput = document.getElementById('taskInput');
+    var tasks = document.getElementById('tasks');
     if (addButton) {
         addButton.addEventListener('click', function (e) {
             if (taskInput) {
-                alert(taskInput.value);
+                tasks.innerText = taskInput.value;
             }
             else {
                 console.error("Element with ID 'taskInput' not found");
