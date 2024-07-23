@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+console.log('Second Phase');
 
 document.addEventListener('DOMContentLoaded', () => {
     const currentDate = document.getElementById('currentDate') as HTMLElement;
